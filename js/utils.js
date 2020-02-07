@@ -335,8 +335,8 @@ function checkLogin() {
         $('.dropdown-menu-login .logout').removeClass('hidden');
         $('.profile-photo span').removeClass('hidden');
     } else {
-        if (!location.pathname.includes("index.html"))
-            location.href = "index.html";
+        //if (!location.pathname.includes("index.html"))
+        //    location.href = "index.html";
         $('.dropdown-menu-login form').removeClass('hidden');
         $('.dropdown-menu-login .logout').addClass('hidden');
         $('.profile-photo span').addClass('hidden');
