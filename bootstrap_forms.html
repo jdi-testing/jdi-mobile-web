@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Bootstrap Forms</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-4.3.min.css"/>
+    <link rel="stylesheet" href="css/uui-all.css"/>
+    <link rel="stylesheet" href="css/custom-styles.css"/>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/lib/components/datepicker3.css"/>
+    <link rel="stylesheet" href="css/lib/components/jquery.mCustomScrollbar.css"/>
+    <link rel="stylesheet" href="jquery-ui/css/smoothness/jquery-ui-1.10.4.custom.min.css"/>
+    <link rel="stylesheet" href="css/fix-bootstrap4.3.css"/>
+    <link rel="stylesheet" href="css/bootstrap-validated-form.css"/>
+    <script src="js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/lib/components/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/lib/jquery.cookie.js"></script>
+    <script src="js/lib/popper.min.js"></script>
+    <script src="jquery-ui/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="bootstrap/js/bootstrap-4.3.min.js"></script>
+    <script src="js/lib/bs-custom-file-input.min.js"></script>
+    <script src="js/uui-core.min.js" type="text/javascript"></script>
+    <script src="js/utils.js" type="text/javascript"></script>
+    <script src="js/bootstrap-validated-form.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+           bsCustomFileInput.init()
+        })
+    </script>
+
+</head>
+<body>
+<header>
+    <div class="replace site-header">replace</div>
+</header>
+<div class="wrapper">
+    <div class="replace left-side-bar">replace</div>
+    <div class="uui-main-container page-inside">
+        <main class="main-form">
+            <div class="pattern-top"></div>
+            <div class="main-content">
+                <div class="main-content-hg">
+                    <div class="support-title">
+                        <i class="fa fa-comments-o"></i>Bootstrap Forms
+                    </div>
+                    <div class="doc-space line">
+                        <h4>Contact support</h4>
+                        <form id="support-form">
+                            <div class="form-group">
+                                <label for="support-email">Please enter your email address at which
+                                    our manager can contact you</label>
+                                <input type="email" class="form-control" id="support-email"
+                                       aria-describedby="emailHelp" placeholder="Enter email">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                    else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="support-message">Your message</label>
+                                <textarea class="form-control" id="support-message" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="support-button-submit">Submit</button>
+                            <button type="reset" class="btn btn-danger" id="support-button-clear">Clear</button>
+                        </form>
+                    </div>
+
+                    <div class="doc-space line">
+                        <h4>Superhero ultimate character creation</h4>
+                        <form id="superhero-creation-form">
+                            <div class="form-group">
+                                <label for="current-alias">Enter your alias</label>
+                                <input type="text" class="form-control" id="current-alias"
+                                       aria-describedby="emailHelp" placeholder="Enter alias">
+                            </div>
+                            <div class="form-group">
+                                <label for="alter-ego">Enter your alter ego</label>
+                                <input type="text" class="form-control" id="alter-ego"
+                                       aria-describedby="emailHelp" placeholder="Enter alter ego">
+                            </div>
+                            <!-- Radios start -->
+                            <fieldset class="form-group">
+                                <div class="row">
+                                    <legend class="col-form-label col-sm-2 pt-0">Species</legend>
+                                    <div class="col-sm-10">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="superheroSpecies" id="human" value="option1" checked>
+                                            <label class="form-check-label" for="human">
+                                                Human
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="superheroSpecies" id="symbiote" value="option2">
+                                            <label class="form-check-label" for="symbiote">
+                                                Symbiote
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="superheroSpecies" id="skrulls" value="option3">
+                                            <label class="form-check-label" for="skrulls">
+                                                Skrulls
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="superheroSpecies" id="kryptonian" value="option4">
+                                            <label class="form-check-label" for="kryptonian">
+                                                Kryptonian
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <!-- Radios end -->
+                            <div>
+                                <label for="superhero-range">Power scale:</label>
+                                <input type="range" class="custom-range mb-3" min="0" max="100" id="superhero-range">
+                            </div>
+                            <label for="select-universe">Universe:</label>
+                            <select class="custom-select mb-3" id="select-universe">
+                                <option selected>Select character's universe</option>
+                                <option value="1">DC</option>
+                                <option value="2">Marvel Earth-616</option>
+                                <option value="3">Marvel Cinematic Universe</option>
+                            </select>
+                            <div class="custom-control custom-switch mb-3" id="superhero-switch-div">
+                                <input type="checkbox" class="custom-control-input" id="superhero-switch">
+                                <label class="custom-control-label" for="superhero-switch">I'm not going to destroy all living beings</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="superhero-button-submit">Submit</button>
+                            <button type="reset" class="btn btn-danger" id="superhero-button-clear">Clear</button>
+                        </form>
+                    </div>
+
+                    <!-- FORM VALIDATION-->
+                    <div class="doc-space line">
+                        <h4>Form validation</h4>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="browser-validation-radio" name="validationType" class="custom-control-input">
+                            <label class="custom-control-label" for="browser-validation-radio">Browser validation</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="client-validation-radio" name="validationType" class="custom-control-input">
+                            <label class="custom-control-label" for="client-validation-radio">Custom validation</label>
+                        </div>
+                        <h6 id = "validated-form-title">Form validation</h6>
+                        <form id="validated-form">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input id="validated-form-name-field" type="text" class="form-control"
+                                               placeholder="Enter name" required>
+                                        <div id="name-valid-feedback" class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Enter your name!</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="validated-form-email"
+                                               placeholder="Enter email" required>
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">Enter valid email!</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="validated-form-phone"
+                                               placeholder="Enter phone" pattern="^[-+0-9()\s]+$">
+                                        <div class="valid-feedback">Looks good!</div>
+                                        <div class="invalid-feedback">It doesn't look like a valid phone number</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                <button type="submit" class="btn btn-primary" id="validated-form-submit">Send</button>
+                                <button type="reset" class="btn btn-danger" id="validated-form-reset">Clear</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- FORM VALIDATION-->
+
+                </div>
+            </div>
+        </main>
+    </div>
+    <div class="replace right-side-bar">replace</div>
+</div>
+<footer>
+    <div class="replace footer">replace</div>
+</footer>
+<Script language="JavaScript">
+	UUI.Vertical_Menu.init({"open": true});
+
+</script>
+<script>
+	$('.selectpicker').selectpicker();
+
+</script>
+<script>
+		includeSideBar();
+		activateTopElement(5,5);
+</script>
+<script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+</body>
+</html>
